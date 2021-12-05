@@ -9,3 +9,44 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  user_id String   @id @default(uuid())
+  name    String   @db.VarChar(255)
+  email   String?  @default("default@example.com") @db.VarChar(100)
+  reg_on  DateTime @default(now())
+  Rent    Rent[]
+
+  @@map("user")
+}
+
+model Product {
+  product_id Int     @id @default(autoincrement())
+  name       String  @db.VarChar(255)
+  stock      Stock[]
+  Rent       Rent[]
+
+  @@map("product")
+}
+
+model Stock {
+  pincode    Int     @default(411015)
+  qty        Int
+  product_id Int
+  product    Product @relation(fields: [product_id], references: [product_id])
+
+  @@id([pincode, product_id])
+  @@map("stock")
+}
+
+model Rent {
+  user_id    String
+  product_id Int
+  qty        Int
+  rent_on    DateTime @default(now())
+  user       User     @relation(fields: [user_id], references: [user_id])
+  product    Product  @relation(fields: [product_id], references: [product_id])
+
+  @@id([rent_on, user_id])
+  @@map("rent")
+}
