@@ -1,10 +1,12 @@
 const express = require("express");
 const createError = require("http-errors");
+const cors = require("cors");
 const morgan = require("morgan");
 const { PORT } = require("./config/config");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));

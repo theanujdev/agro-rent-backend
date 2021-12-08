@@ -1,9 +1,12 @@
+const prisma = require("../utils/prismaClient");
+
 const createUser = (req, res, next) => {
   res.send({ message: "createUser" });
 };
 
-const getUsers = (req, res, next) => {
-  res.send({ message: "getUsers" });
+const getUsers = async (req, res, next) => {
+  const users = await prisma.user.findMany();
+  res.json(users);
 };
 
 const getUser = (req, res, next) => {
