@@ -53,7 +53,7 @@ You need to run [Agro Rent Frontend](https://github.com/ProdexOne/agro-rent-fron
 
 ## Optimizations
 
-Project structure is optimized for scalability. Routes, controllers, schema, config are all separated. Few utility classes and functions like http-errors, morgan, etc. have also been used.
+Project structure is optimized for scalability. Following the ER diagram, database has 4 tables with relations. Routes, controllers, schema, config are all separated. Few utility classes and functions like http-errors, morgan, etc. have also been used.
 
 ## Feedback
 
