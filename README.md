@@ -49,7 +49,7 @@ yarn dev
 
 > **Note:** Make sure to run **PostgreSQL** server in the background.
 
-You need to run [Agro Rent Frontend](https://github.com/ProdexOne/agro-rent-frontend) to use it.
+You need to run [Agro Rent Frontend](https://github.com/theanujdev/agro-rent-frontend) to use it.
 
 ## Optimizations
 
@@ -57,11 +57,11 @@ Project structure is optimized for scalability. Following the ER diagram, databa
 
 ## Feedback
 
-If you have any feedback, please reach out at [@AnujS_IN](https://twitter.com/AnujS_IN)
+If you have any feedback, please reach out at [@theanujdev](https://twitter.com/theanujdev)
 
 ## Authors
 
-- [@ProdexOne](https://www.github.com/ProdexOne)
+- [@theanujdev](https://www.github.com/theanujdev)
 
 ## License
 
