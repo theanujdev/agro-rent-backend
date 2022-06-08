@@ -22,7 +22,7 @@ This portal allows users to view available agricultural equipments in their area
 - Clone the project
 
 ```bash
-git clone https://github.com/ProdexOne/agro-rent-backend
+git clone https://github.com/theanujdev/agro-rent-backend
 ```
 
 - Go to the project directory
